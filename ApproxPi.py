@@ -12,23 +12,31 @@ import time
 def main():
  realPi = math.pi
 
- precision = int(input("Enter decimal precision upto 10: "))
- if 0<= precision <=10:
-   return 
- else:
-   print("Please enter a value between 0 and 10 ")
+precision = int(input("Enter decimal precision upto 10: "))
 
-decimal_precision = get_precision()
-print(f"You have selected a decimal precision of: {decimal_precision}")
-
+while not (0<= precision <=10):
+  print("Please enter a value between 0 and 10 ")
+  precision = int(input("Enter decimal precision upto 10: "))
+ 
 start = time.time()
-  #calculate pi using the approximation technique
-  #Loop until the level of percision is reached
+   #calculate pi using the approximation technique
+   #Loop until the level of percision is reached
 
+approxPi =4/1
+sign = -1
+denom = 3
+realPi = math.pi
+while round (approxPi, precision) != round (realPi , precision) :
+  RoundApp_Pi = round (approxPi, precision)
+  print(f"ApproxPi = {RoundApp_Pi}")
+  approxPi = approxPi + (sign*4/denom)
+  sign =sign*-1
+  denom=denom+2
+  
 end = time.time()
 
 elapsedTime = end - start
-print(elapsedTime)
+print(f"Elapsed time : {elapsedTime}")
 
 if __name__ == '__main__':
   main()

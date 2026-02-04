@@ -12,7 +12,7 @@ def main():
   user_input = input("Please enter temperatire in Fahrenheit:  ")
   tempF = float (user_input)
  
-  tempC = tempF / 2
+  tempC = (tempF -32) * 5/9
   tempC = round (tempC,1)
 
   print(tempF, "is ", tempC, "degrees celsius.")

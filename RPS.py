@@ -28,10 +28,10 @@ def main():
       elif (user_choice == 'R' or 'r' and system_choice == 'S') or\
            (user_choice == 'P' or 'p' and system_choice == 'R') or\
            (user_choice == 'S' or 's' and system_choice == 'P'): 
-           print (f"System choice {system_choice}   You Win! ")
+           print (f"System Chose {system_choice} So You Win! ")
            wins +=1
       else:
-        print (f"System choice {system_choice}   You Lose ! ")
+        print (f"System Chose {system_choice} So You Lose ! ")
         losses +=1
       break
    play_again = input("Do you want to play again? (Y/N):")
