@@ -9,7 +9,7 @@ def main():
   #Convert that temperature to celsius, rounding to 1 decimal percision
   #Output converted temperature.
 
-  user_input = input("Please enter temperatire in Fahrenheit:  ")
+  user_input = input("Please enter temperature in Fahrenheit:  ")
   tempF = float (user_input)
  
   tempC = (tempF -32) * 5/9
